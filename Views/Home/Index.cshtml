@@ -6,39 +6,19 @@
     <h1 class="display-4">Bienvenido a Series Gato</h1>
     <p>La mejor informacion de tus series favoritas.</p>
 </div>
-<div style="">
+
+<div style="float: right">
+@foreach(Series item in ViewBag.ListaSeries){
 <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+  <img src="@item.ImagenSerie" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">@item.Nombre</h5>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalTemporadas" onclick="MostrarTemporadas(@item.IdSerie)"> Temporadas</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalActores" onclick="MostrarActores(@item.IdSerie)"> Actores</button>
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalSeries" onclick="MostrarSeries(@item.IdSerie)"> Mas info</button>
   </div>
 </div>
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
+}
 </div>
 <!-- Modal -->
 <div class="modal" id="ModalSerie" tabindex="-1">
