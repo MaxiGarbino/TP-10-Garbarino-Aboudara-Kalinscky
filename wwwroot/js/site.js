@@ -9,6 +9,12 @@
             function (response){
                 $("#TituloTemporada").html("Nombre de la temporada: " + response.TituloTemporada);
                 $("#NumeroTemporada").html("Temporada N°: " +response.NumeroTemporada);
+            },
+            error : function(xhr,status){
+                alert("Disculpe, hubo un problema, Matias Aboudara hizo algo mal");
+            },
+            complete: function(xhr,status){
+                console.log('Peticion realizada')
             }
 
     }
@@ -24,7 +30,14 @@ function MostrarActores(IDS) {
         success:
             function (response){
                 $("#NombreActor").html("Nombre del actor " +response.Nombre);
-            }
+            },
+        error : function(xhr,status){
+            alert("Disculpe, hubo un problema, Matias Aboudara hizo algo mal");
+        },
+        complete: function(xhr,status){
+            console.log('Peticion realizada')
+        }
+
 
     }
     );
@@ -42,6 +55,12 @@ function MostrarActores(IDS) {
                 $("#AñoInicio").html("Año de estreno: " +response.AñoInicio);
                 $("#Sinopsis").html("Sintesis: " + response.Sinopsis);
                 $("#ImagenSerie").attr("src","/"+response.Nombre);
+            },
+            error : function(xhr,status){
+                alert("Disculpe, hubo un problema, Matias Aboudara hizo algo mal");
+            },
+            complete: function(xhr,status){
+                console.log('Peticion realizada')
             }
 
     }
