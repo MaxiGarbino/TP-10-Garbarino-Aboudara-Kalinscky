@@ -1,12 +1,12 @@
-﻿function MostrarTemporada(IDS) {
+﻿function MostrarTemporadas(IDS) {
     $.ajax({
-
         type: 'POST',
         dataType: 'JSON',
         url: '/Home/Index',
         data: {IDSerie: IDS},
         success:
             function (response){
+                alert("hola");
                 $("#TituloTemporada").html("Nombre de la temporada: " + response.TituloTemporada);
                 $("#NumeroTemporada").html("Temporada N°: " +response.NumeroTemporada);
             },
@@ -42,7 +42,7 @@ function MostrarActores(IDS) {
     }
     );
 }
-function MostrarActores(IDS) {
+function MostrarSeries(IDS) {
     $.ajax({
 
         type: 'POST',
