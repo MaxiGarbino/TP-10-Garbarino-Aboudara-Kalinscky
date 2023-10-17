@@ -1,9 +1,9 @@
-namespace TP10_Aboudara_Garbarino_Kalinscky.Models;
-    public class Temporadas{
-        public int IdTemporada {get;set;}
-        public int IdSerie {get;set;}
-        public int NumeroTemporada {get;set;}
-        public string TituloTemporada {get;set;}
+namespace TP_10_Garbarino_Aboudara_Kalinscky.Models;
+public class Temporadas{
+    public int IdTemporada {get;set;}
+    public int IdSerie {get;set;}
+    public int NumeroTemporada {get;set;}
+    public string TituloTemporada {get;set;}
     
     public Temporadas(){
 
@@ -15,4 +15,4 @@ namespace TP10_Aboudara_Garbarino_Kalinscky.Models;
         this.NumeroTemporada = NumeroTemporada;
         this.TituloTemporada = TituloTemporada;
     }
-    }
+}

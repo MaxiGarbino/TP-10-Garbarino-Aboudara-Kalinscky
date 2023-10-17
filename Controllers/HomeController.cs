@@ -24,12 +24,12 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
-    public Actores VerDetalleActoresAjax(int IdSerie){
-        Actores = BD.listarActores(IdSerie);
-        return Actores;
+    public List<Actores> VerDetalleActoresAjax(int IdSerie){
+        List<Actores> actores = BD.listarActores(IdSerie);
+        return actores;
     }
-    public Temporadas VerDetalleTemporadaAjax(int IdSerie){
-        Temporadas = BD.listarTemporadas(IdSerie);
-        return Temporadas;
+    public List<Temporadas> VerDetalleTemporadaAjax(int IdSerie){
+        List<Temporadas> temporadas = BD.listarTemporadas(IdSerie);
+        return temporadas;
     }
 }

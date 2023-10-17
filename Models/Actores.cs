@@ -1,4 +1,4 @@
-namespace TP10_Aboudara_Garbarino_Kalinscky.Models;
+namespace TP_10_Garbarino_Aboudara_Kalinscky.Models;
 public class Actores{
     public int IdActor {get; set;}
     public int IdSerie {get; set;}
