@@ -32,7 +32,7 @@ public static class BD
         List<Actores> actores;
          using(SqlConnection db = new SqlConnection(_connectionString)){
             string sql = "SELECT * FROM Actores where IdSerie = @pIdSerie";
-            actores = db.Query<Temporadas>(sql, new {pIdSerie = IdSerie}).ToList();
+            actores = db.Query<Actores>(sql, new {pIdSerie = IdSerie}).ToList();
         }
         return actores;
     }

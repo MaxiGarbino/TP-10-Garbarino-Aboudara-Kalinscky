@@ -1,11 +1,11 @@
-namespace TP10_Aboudara_Garbarino_Kalinscky.Models;
-    public class Series
-    {
-        public int IdSerie {get;set;}
-        public string Nombre {get;set;}
-        public int AñoInicio {get;set;}
-        public string Sinopsis {get;set;}
-        public string ImagenSerie {get;set;}
+namespace TP_10_Garbarino_Aboudara_Kalinscky.Models;
+public class Series
+{
+    public int IdSerie {get;set;}
+    public string Nombre {get;set;}
+    public int AñoInicio {get;set;}
+    public string Sinopsis {get;set;}
+    public string ImagenSerie {get;set;}
     
     public Series(){
 
@@ -17,4 +17,4 @@ namespace TP10_Aboudara_Garbarino_Kalinscky.Models;
         this.Sinopsis = Sinopsis;
         this.ImagenSerie = ImagenSerie;
     }
-    }
+}
