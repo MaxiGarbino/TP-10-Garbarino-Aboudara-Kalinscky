@@ -29,9 +29,9 @@ public class HomeController : Controller
     {
         return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
-    public Series VerDetalleActoresAjax(int IdSerie){
-        Serie = BD.listarActores(IdSerie);
-        return Serie;
+    public Actores VerDetalleActoresAjax(int IdSerie){
+        Actores = BD.listarActores(IdSerie);
+        return Actores;
     }
     public Temporadas VerDetalleTemporadaAjax(int IdSerie){
         Temporadas = BD.listarTemporadas(IdSerie);
