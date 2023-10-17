@@ -1,4 +1,4 @@
-namespace TP10_Aboudara_Garbarino_Kalinscky.Models{
+namespace TP10_Aboudara_Garbarino_Kalinscky.Models;
     public class Series
     {
         public int IdSerie {get;set;}
@@ -18,4 +18,3 @@ namespace TP10_Aboudara_Garbarino_Kalinscky.Models{
         this.ImagenSerie = ImagenSerie;
     }
     }
-}
