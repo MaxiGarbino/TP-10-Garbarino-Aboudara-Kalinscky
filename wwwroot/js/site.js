@@ -2,14 +2,14 @@
     $.ajax({
         type: 'POST',
         dataType: 'JSON',
-        url: '/Home/Index',
+        url: '/Home/VerDetalleTemporadaAjax',
         data: {IDSerie: IDS},
         success:
             function (response){
-                alert("hola");
+                alert("Entro a la funcion");
                 $("#TituloModal").html("Temporadas");
                 $("#Info1").html("Nombre de la temporada: " + response.TituloTemporada);
-                $("#Info2").html("Temporada N°: " +response.NumeroTemporada);
+                $("#Info2").html("Temporada N°: " + response.NumeroTemporada);
             },
             error : function(xhr,status){
                 alert("Disculpe, hubo un problema, Matias Aboudara hizo algo mal");
@@ -26,10 +26,11 @@ function MostrarActores(IDS) {
 
         type: 'POST',
         dataType: 'JSON',
-        url: '/Home/Index',
+        url: '/Home/VerDetalleActoresAjax',
         data: {IDSerie: IDS},
         success:
             function (response){
+                alert("Entro a la funcion");
                 $("#TituloModal").html("Actores");
                 $("#Info1").html("Nombre del actor " +response.Nombre);
             },
@@ -49,10 +50,11 @@ function MostrarSeries(IDS) {
 
         type: 'POST',
         dataType: 'JSON',
-        url: '/Home/Index',
+        url: '/Home/VerDetalleSerieAjax',
         data: {IDSerie: IDS},
         success:
             function (response){
+                alert("Entro a la funcion");
                 $("#TituloModal").html("Detalle de la serie");
                 $("#Info1").html("Nombre: " + response.Nombre);
                 $("#Info2").html("Año de estreno: " +response.AñoInicio);

@@ -18,6 +18,14 @@ public static class BD
         }
         return series;
     }
+    public static Series DetalleSerie(int IdSerie){
+        Series serie;
+        using(SqlConnection db = new SqlConnection(_connectionString)){
+            string sql = "SELECT * FROM Series where IdSerie = @pIdSerie";
+            serie = db.QueryFirstOrDefault<Series>(sql,new {pIdSerie = IdSerie});
+        }
+        return serie;
+    }
     public static List<Temporadas> temporadas = new List<Temporadas>();
     public static List<Temporadas> listarTemporadas(int IdSerie) {
         List<Temporadas> temporadas;
