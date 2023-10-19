@@ -3,23 +3,11 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Bienvenido a Series Gato</h1>
-    <p>La mejor informacion de tus series favoritas.</p>
+    <h1 class="display-4">Bienvenido a Series Kali</h1>
+    <p>Tus series favoritas, en un solo lugar</p>
 </div>
 
 <div style="float: right">
-<<<<<<< HEAD
-@foreach(var item in ViewBag.Series){
-<div class="card" style="width: 18rem;">
-  <img src="@item.ImagenSerie" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">@item.Nombre</h5>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalTemporadas" onclick=MostrarTemporadas(@item.IdSerie)> Temporadas</button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalActores" onclick=MostrarActores(@item.IdSerie)> Actores</button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalSeries" onclick=MostrarSeries(@item.IdSerie)> Mas info</button>
-  </div>
-</div>
-=======
 @foreach (var item in ViewBag.Series)
 {
     <div class="card" style="display: inline-block; width: 18rem;">
@@ -31,7 +19,6 @@
             <button type="button" style="margin: 3px" class="btn btn-primary" data-toggle="modal" data-target="#ModalSeries" onclick="MostrarSeries(@item.IdSerie)"> Mas info</button>
         </div>
     </div>
->>>>>>> ae77b839db53df92ab46ca73d0bfefca5b707829
 }
 </div>
 
