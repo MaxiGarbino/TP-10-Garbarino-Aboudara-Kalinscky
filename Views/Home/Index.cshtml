@@ -8,18 +8,6 @@
 </div>
 
 <div style="float: right">
-<<<<<<< HEAD
-@foreach(var item in ViewBag.Series){
-<div class="card" style="width: 18rem;">
-  <img src="@item.ImagenSerie" class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">@item.Nombre</h5>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalTemporadas" onclick=MostrarTemporadas(@item.IdSerie)> Temporadas</button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalActores" onclick=MostrarActores(@item.IdSerie)> Actores</button>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalSeries" onclick=MostrarSeries(@item.IdSerie)> Mas info</button>
-  </div>
-</div>
-=======
 @foreach (var item in ViewBag.Series)
 {
     <div class="card" style="display: inline-block; width: 18rem;">
@@ -31,17 +19,14 @@
             <button type="button" style="margin: 3px" class="btn btn-primary" data-toggle="modal" data-target="#ModalSeries" onclick="MostrarSeries(@item.IdSerie)"> Mas info</button>
         </div>
     </div>
->>>>>>> ae77b839db53df92ab46ca73d0bfefca5b707829
 }
 </div>
-
-
 <!-- Modal -->
 <div class="modal" id="ModalSerie" tabindex="-1">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="NombreSerie">Modal title</h5>
+        <h5 class="modal-title" id="TituloModal">Modal title</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
