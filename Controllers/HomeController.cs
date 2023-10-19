@@ -32,4 +32,8 @@ public class HomeController : Controller
         List<Temporadas> temporadas = BD.listarTemporadas(IdSerie);
         return temporadas;
     }
+    public Series VerDetalleSerieAjax(int IdSerie){
+        Series serie = BD.DetalleSerie(IdSerie);
+        return serie;
+    }
 }
