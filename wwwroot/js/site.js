@@ -6,10 +6,17 @@
         data: {IDSerie: IDS},
         success:
             function (response){
-                alert("Entro a la funcion");
+                console.log(response);
                 $("#TituloModal").html("Temporadas");
-                $("#Info1").html("Nombre de la temporada: " + response.TituloTemporada);
-                $("#Info2").html("Temporada N°: " + response.NumeroTemporada);
+
+                let texto = "<p>";
+                response.forEach(element => {
+                    texto+="Nombre de la temporada: " + element.tituloTemporada +"<br>";
+                    texto+="Temporada N°: " + element.numeroTemporada + "<br>";
+                }); 
+                texto+="</p>"
+                
+                $("#infoSerie").html(texto);
             },
             error : function(xhr,status){
                 alert("Disculpe, hubo un problema, Matias Aboudara hizo algo mal");
@@ -30,9 +37,17 @@ function MostrarActores(IDS) {
         data: {IDSerie: IDS},
         success:
             function (response){
-                alert("Entro a la funcion");
+                console.log(response);
                 $("#TituloModal").html("Actores");
-                $("#Info1").html("Nombre del actor " +response.Nombre);
+                let texto = "<p>";
+                let i = 1;
+                response.forEach(element => {
+                    texto+="Nombre del actor N°"+i+": "+element.nombre +"<br>";
+                    i+=1;
+                }); 
+                texto+="</p>"
+                $("#infoSerie").html(texto);
+                
             },
         error : function(xhr,status){
             alert("Disculpe, hubo un problema, Matias Aboudara hizo algo mal");
@@ -45,7 +60,7 @@ function MostrarActores(IDS) {
     }
     );
 }
-function MostrarSeries(IDS) {
+function MostrarInfoSerie(IDS) {
     $.ajax({
 
         type: 'POST',
@@ -54,12 +69,13 @@ function MostrarSeries(IDS) {
         data: {IDSerie: IDS},
         success:
             function (response){
-                alert("Entro a la funcion");
-                $("#TituloModal").html("Detalle de la serie");
-                $("#Info1").html("Nombre: " + response.Nombre);
-                $("#Info2").html("Año de estreno: " +response.AñoInicio);
-                $("#Info3").html("Sintesis: " + response.Sinopsis);
-                $("#Info4").attr("src","/"+response.Nombre);
+                console.log(response);
+                $("#TituloSerie").html("Detalle de la serie" + response.nombre);
+
+                let texto = "<p> Año de estreno: " +response.añoInicio + "<br>";
+                texto+= "Sintesis: " + response.sinopsis + "<br>";
+                texto+= "<img src='" + response.imagenSerie + "' class='img-fluid '></p>";
+                $("#infoSerie").html(texto);
             },
             error : function(xhr,status){
                 alert("Disculpe, hubo un problema, Matias Aboudara hizo algo mal");
