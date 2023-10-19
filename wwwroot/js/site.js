@@ -7,7 +7,7 @@
         success:
             function (response){
                 console.log(response);
-                $("#TituloModal").html("Temporadas");
+                $("#TituloSerie").html("Temporadas");
 
                 let texto = "<p>";
                 response.forEach(element => {
@@ -38,7 +38,7 @@ function MostrarActores(IDS) {
         success:
             function (response){
                 console.log(response);
-                $("#TituloModal").html("Actores");
+                $("#TituloSerie").html("Actores");
                 let texto = "<p>";
                 let i = 1;
                 response.forEach(element => {
